@@ -4,12 +4,12 @@ To complete this analysis, I looked at the data of 4,114 different Kickstarter c
 61% of the campaigns to fund theater productions in the US were successful, 37% failed, and the remaining 2% are still ongoing. 
 The average rate of success for Kickstarter campaigns is 53%, so theater can be considered a popular category for funding by Kickstarter's donors.
 
-![Parent Category Outcomes Chart](C:\Users\Mikayla Kurland\Desktop\Class Folder\Week 1 - Excel/Parent Category Outcomes Chart.png)
+![](Parent%20Category%20Outcomes%20Chart.png)
 
 Successful kickstarter campaigns to fund plays had an average goal of  $5,048.88, as opposed to an average goal of  $10,554.21 for failed campaigns.
 While this may seem to indicate that successful campaigns had lower funding goals, it should be noted that the average amounts pledged differed by a factor of 10 between failed and successful campaigns. 
 
-C:\Users\Mikayla Kurland\Desktop\Class Folder\Week 1 - Excel
+![](mean%20and%20median%20chart.PNG)
 
 This indicates that there may be other reasons for the campaigns' failure than the fact that the funding goal was higher. 
 The successful US theater campaigns had an average per person donation of $93.00, and an average of 63 backers. 
