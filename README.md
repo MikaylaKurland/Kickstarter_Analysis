@@ -22,7 +22,7 @@ In looking at trends on the graph for theater outcomes based on launch dates, it
 
 Conversely, in December, the number of successful and failed campaigns are almost the same, with only a two-campaign difference between the two numbers. 
 
-![](DecemberTotals.png)
+![](December.png)
 
 Two conclusions can be made here: first, that launching a campaign during May and June historically give the greatest changes of the campaign succeeding, and second, that launching a campaign in December gives the lowest chance of the campaign succeeding.
 
