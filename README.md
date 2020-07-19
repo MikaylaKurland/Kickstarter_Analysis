@@ -1,31 +1,49 @@
 # An Analysis of Kickstarter Campaigns
-This is an analysis of Kickstarter funding for theater productions in the US to gauge the potential success of the campaign for the new play "Fever" with a fundraising goal of $10,000.00
 
-To complete this analysis, I looked at the data of 4,114 different Kickstarter campaigns. Of those 4,114, 671 were campaigns to fund theater productions in the US. 
-While theater campaigns make up a small percentage of the total campaigns on Kickstarter, they generally do very well. 
-61% of the campaigns to fund play productions in the US were successful. The average rate of success for Kickstarter campaigns is 53%, so theater can be considered a popular category for funding by Kickstarter's donors in the US.
+## Overview of Project: 
+The purpose of this analysis of Kickstarted data is to look for trends between how fundraising campaigns fared in relation to their launch dates and funding goals. I will attempt to draw some conclusions for how one specific data subset – fundraising campaigns for plays – to provide some insight into how to maximize the chances of success for a new fundraising campaign in this same sub-category on the Kickstarter platform.  
 
-![](Parent%20Category%20Outcomes%20Chart.png)
+## Analysis and Challenges
+I began my analysis by determining the two factors that I would use to try show a relationship between it and a campaign’s success. The first factor was the launch date of the campaign, or when was the campaign posted to the Kickstarter platform. The second factor was the fundraising goal of the campaign, or how much money the campaign was trying to generate. These two factors are helpful because they can help establish clear guidelines for prospective campaigns for plays on Kickstarter when it comes to the most basic campaign considerations – how much to ask for and when to ask for it. 
 
-Breaking down which campaigns were funded is a helpful tool in determining what makes a Kickstarter campaign successful. 
-Successful kickstarter campaigns to fund plays had an average goal of  $5,048.88, as opposed to the much larger average goal of  $10,554.21 for failed campaigns.
-While this may seem to indicate that successful campaigns had lower funding goals, it should be noted that the average amounts pledged differed by a factor of 10 between failed and successful campaigns. 
+To start looking for relationships with the launch date data, I first had to decide how I would break down the dates – by individual dates, by years, by quarters, etc. I decided to categorize the data by month, but with the ability to break out individual years if needs be. I chose to not try to plot individual data points because of the number of dates that I had (1,369) even when filtering just for theater fundraiser data. Creating bins for each month would illustrate helpful historical trends, while not overwhelming the viewer with too many data points. 
 
-![](mean%20and%20median%20chart.PNG)
+![](MonthBreakdown.png)
 
-This indicates that there may be other reasons for the campaigns' failure than the fact that the funding goal was higher. 
-The successful US theater campaigns had an average of 63 backers, each making an average donation of $93.00 per person.
-Failed campaigns only had an average of 8 donors to their campaigns, and excluding campaigns that had no donors and raised $0.00, the average per person donation for failed campaigns was only $58.00.
-This means that the successful campaigns somehow attracted more donors and incentivized the donors to give additional funds. 
+When analyzing the data set for fundraising goal, the question of how to categorize and create “bins” for the data was even more important given the range of values in the data set. I was only looking at the data sub-category of plays, but I still had 1,066 data points, with a value range of $1.00 to $200,000.00. Despite the large range of the data, the majority of the data points were concentrated on the lower end of the range at $10,000.00 or under. To be inclusive of the range of the data and still give some helpful bins for the data points under $10,000.00, I created twelve bins, the first of which captured all data points under $1,000.00, and the last of which captured all data points above $50,000.00, with the remainder falling into incremented bins of $5,000.00 from $0 to $50,000.00. I believe that this shows the spread of the data, while still giving helpful information regarding the success or failure of the campaigns within those funding goal ranges.
 
-There may be helpful factors in determining this success. For example, successful campaigns and failed campaigns had similar durations, but more campaigns failed near December, and more campaigns were successful in near May.
+![](CampaignPercentByGoals.png)
 
-While there may be a boon to running the fundraising campaign for "Fever" in May, I would suggest that the higher donation amount and higher donor numbers for successful projects is due mostly to blurbs and incentives.
+## Results: 
+### Analysis of Outcomes Based on Launch Dates:
+In looking at trends on the graph for theater outcomes based on launch dates, it is clear that there are points where there is a notable increase between the number of successful and failed campaigns, and also that there is a point where there is a notable decrease between the number of successful and failed campaigns. In May and June, the number of successful campaigns is over two times the number of failed campaigns, higher than at any other point. 
 
-I have highlighted fifteen campaigns in the "Successful US Kickstarters" tab that have the same fundraising goal as "Fever" so you can see the blurbs the authors included. My recommendation would be to run your campaign in the summer months and model your campaign and donor incentives off of the similar successful campaigns from previous years. 
+![](MayandJuneTotals.png)
 
-![](15Successful.png)
+Conversely, in December, the number of successful and failed campaigns are almost the same, with only a two-campaign difference between the two numbers. 
 
-Finally, there was the question of producing a musical in Great Britain with a budget of £4,000.00. Unfortunately, the odds of this hypothetical project getting funded are not as good as those for "Fever." Only 38% of similar campaigns were successfully funded through Kickstarter, with the average amount raised for each successful campaign just over £1,000.00. I believe this is due to lack of interest from donors, as successful campaigns for musicals in Great Britain only got an average of 27 donors per campaign. I would suggest either adjusting your budget or pursuing a different method of raising capital to produce a musical in England.
+![](DecemberTotals.png)
 
-![](MusicalsInGB.png)
+Two conclusions can be made here: first, that launching a campaign during May and June historically give the greatest changes of the campaign succeeding, and second, that launching a campaign in December gives the lowest chance of the campaign succeeding.
+
+![](Theater_Outcomes_vs_Launch.png)
+
+### Analysis of Outcomes Based on Goals:
+When looking for conclusions in outcomes based on goals, the initial trend in the data shows that the less money the campaigns for plays look to raise, the more likely they are to be successful. 
+
+![](Outcomes_vs_Goals.png)
+
+There are outliers on the graph for the $35,000 to $39,999 and $40,000 to $44,999 categories, but these two categories only account for 1.3% of the data set combined. 
+
+![](InkedGoalsByPercent_LI.jpg)  
+
+![](InkedCampaignPercentByGoalsHighlighted.jpg)
+
+I do not think that statistically this is enough to offset the overall trend. 
+
+### Limiting Factors and Recommendations:
+Looking at trends in outcomes as they relate to timing and campaign goal amount give good general outlines for successful campaign creation. Other general campaign statistics that might be helpful to analyze are campaign duration, and whether being a “staff pick” changed any of the outcomes for a campaign in any of these breakdowns. Additionally, it might be helpful to do a deeper dive into where successful campaigns’ funding came from – whether more donors giving less money, or fewer, but more specifically driven donors giving more money? One could also look at the length of blurbs and whether having more information was helpful or hurtful to a campaign. These are, however, only the quantitative attributes to a Kickstarter campaign. There are many qualitative factors, such as how well-written blurbs and descriptions are, whether a campaign had good incentives to donate, and how the campaign was advertised that are not possible to measure with this data set, but would be helpful to factor in to the probability of success or failure of a campaign.
+
+## Conclusions:
+In conclusion, if you are creating a Kickstarter campaign to raise money for producing a play, you will have a higher likelihood of success if you can keep your fundraising goal to under $10,000 and launch your campaign in the summer months of May or June, however there may be other factors at play that could help or hinder your campaign’s success. 
+
